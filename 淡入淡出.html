@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+	<title>fadein and fadeout</title>
+	<style type="text/css">
+	.fadeIn,.fadeOut,.fadeToggle{
+		background-color: rgb(229,238,204);
+			text-align: center;
+			border: 1px solid rgb(150,150,150);
+			margin: 100px 200px;
+	}
+	.p1{
+		border-bottom: 1px solid rgb(150,150,150);
+	}
+	</style>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+	</script>
+	<script>
+		$(document).ready(function(){
+			$(".fadeIn .p1").click(function(){
+				$(".fadeIn .p2").fadeIn();
+			});
+		});
+		$(document).ready(function(){
+			$(".fadeOut .p1").click(function(){
+				$(".fadeOut .p2").fadeOut();
+
+			});
+		});
+		$(document).ready(function(){
+			$(".fadeToggle .p1").click(function(){
+				$(".fadeToggle .p2").fadeToggle();
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div class="fadeIn" style="">
+
+		<div class="p1" style="">
+			点击展示 淡入 面板
+		</div>
+		<div class="p2" style="display: none;">
+			<p>
+				因为时间是宝贵的，我们提供快捷方便的学习方法。
+			</p>
+			<p>
+				在 W3CSchool,你可以学习需要的知识。
+			</p>
+		</div>
+	</div>
+	<div class="fadeOut" style="">
+
+		<div class="p1" style="">
+			点击展示 淡出 面板
+		</div>
+		<div class="p2">
+			<p>
+				因为时间是宝贵的，我们提供快捷方便的学习方法。
+			</p>
+			<p>
+				在 W3CSchool,你可以学习需要的知识。
+			</p>
+		</div>
+	</div>
+	<div class="fadeToggle" style="">
+
+		<div class="p1" style="">
+			点击展示 淡入/淡出 面板
+		</div>
+		<div class="p2" style="display: none;">
+			<p>
+				因为时间是宝贵的，我们提供快捷方便的学习方法。
+			</p>
+			<p>
+				在 W3CSchool,你可以学习需要的知识。
+			</p>
+		</div>
+	</div>
+	
+</body>
+</html>

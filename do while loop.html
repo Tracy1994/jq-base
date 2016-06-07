@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>do while loop</title>
+	<script type="text/javascript">
+	//while 循环
+		function myFunction1()
+		{
+			var i=0;
+			var x='';
+			while(i<5)
+			{
+				x=x+i;
+				document.getElementById('myFunction1').innerHTML=x;
+				i++;
+			}
+		}
+		//do while 循环
+		function myFunction2()
+		{
+			var a=0;
+			var x='';
+			do
+			{
+				x=x+a;
+				document.getElementById('myFunction2').innerHTML=x;
+				a=a+1;
+			}
+			while(a<5);
+		}
+	</script>
+</head>
+<body>
+<button onclick="myFunction1()"> click me</button>
+<button onclick="myFunction2()">click me</button>
+<p id="myFunction1"></p>
+<p id="myFunction2"></p>
+</body>
+</html>

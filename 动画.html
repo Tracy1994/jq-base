@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>动画</title>
+	<style type="text/css">
+		div{
+			width: 80px;
+			height: 80px;
+			margin: 10px;
+			background-color: rgb(180,180,180);
+			position: relative;
+		}
+		.d2{
+			left: 800px;
+		}
+	</style>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("document").ready(function(){
+			$("#b3").click(function(){
+				$(".d1").animate({
+					left:'250px',
+					width:'220px',
+					
+
+
+				},5000);
+				$(".d2").animate({
+					right:'250px',
+					width:'220px',
+					
+				},5000);
+			});
+			$("#b1").click(function(){
+				$(".d1").stop();
+				$(".d2").stop();
+			});
+			$("#b2").click(function(){
+				$(".d1").stop(true,true);
+				$(".d2").stop(true,true);
+			});
+		});
+	</script>
+</head>
+<body>
+<button id="b3">star</button>
+<button id="b1">stop</button>
+<button id="b2">stop to finish</button>
+
+<div class="d1"></div>
+<div class="d2"></div>
+
+</body>
+</html>

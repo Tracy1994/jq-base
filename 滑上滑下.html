@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>滑上滑下</title>
+	<style type="text/css">
+		section{
+			margin: 20px;
+		}
+		div{
+			background-color: rgb(180,180,180);
+			border: 1px solid rgb(150,150,150);
+		}
+		.d2,.d6{
+			display: none;
+		}
+	</style>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	$("document").ready(function(){
+		$(".d1").click(function(){
+			$(".d2").slideDown("slow");
+		});	
+		$(".d4").click(function(){
+			$(".d4").slideUp();
+		});
+		$(".d5").click(function(){
+			$(".d6").slideToggle();
+		});
+	});
+	
+	</script>
+</head>
+<body>
+<section>
+	<div class="d1">click here to slide down</div>
+	<div class="d2">hello world</div>
+</section>
+<section>
+	<div class="d3">hello world</div>
+	<div class="d4">click here to slide up</div>
+</section>
+<section>
+	<div class="d5">click here to slide up or down</div>
+	<div class="d6">hello world</div>
+</section>
+</body>
+</html>

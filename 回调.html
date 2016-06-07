@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>回调</title>
+	<style type="text/css">
+		div{
+			background-color: green;
+			color: white;
+			margin: 10px;
+			width: 100px;
+			height: 100px;
+		}
+
+	</style>
+	<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("#d1").click(function(){
+			$("#d3").hide(1009);
+			alert("hide");
+		});
+		$("#d2").click(function(){
+			$("#d3").hide(1009,function(){
+				alert("hide");
+			});
+		});	
+	});
+		
+	</script>
+</head>
+<body>
+<div id="d1">callback click</div>
+<div id="d2">no callback click</div>
+<div id="d3"></div>
+</body>
+</html>
