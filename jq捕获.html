@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>jq捕获</title>
+</head>
+<body>
+	<input id="js_input" type="text" name="" placeholder="val()">
+	<p id="js_p">this is <b>a</b> page</p>
+	<button id="js_btn1">text()</button>
+	<button id="js_btn2">html()</button>
+	<button id="js_btn3">val()</button>
+	<button id="js_btn4">attr()</button>
+	<a id="js_a" href="http://www.runoob.com">vegetable birds</a>
+	<script type="text/javascript" src='./jquery.js'></script>
+	<script type="text/javascript">
+		$("#js_btn1").click(function(){
+			alert($("#js_p").text());
+		});
+		$("#js_btn2").click(function(){
+			alert($("#js_p").html());
+		});
+		$("#js_btn3").click(function(){
+			alert($("#js_input").val());
+		});
+		$("#js_btn4").click(function(){
+			alert($("#js_a").attr('href'));
+		});
+	</script>
+</body>
+</html>
