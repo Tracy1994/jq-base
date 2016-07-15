@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>jq css属性</title>
+</head>
+<body>
+<p>this is a paragraph</p>
+<button id="js_css">set css</button>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+$("#js_css").click(function(){
+	$("p").css({
+		"background-color":"green",
+		"color":"white"
+	});
+});
+	
+</script>
+</body>
+</html>

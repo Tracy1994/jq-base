@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>jq ajax load</title>
+</head>
+<body>
+<div id="jq_change">hello world</div>
+<button id="jq_load">click me to load</button>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+	$("#jq_load").click(function(){
+		$("#jq_change").load("http://www.runoob.com/try/ajax/demo_test.txt",function(responseTxt,statusTxt,xhr){
+			// alert("responseTxt: "+ responseTxt+" statusTxt: "+statusTxt+" xhr :"+xhr);
+			alert("Error: "+xhr.status+": "+xhr.statusText);
+		});
+			
+		
+	});
+</script>
+</body>
+</html>

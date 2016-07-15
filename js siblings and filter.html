@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jq siblings</title>
+	<style type="text/css">
+		div{
+			border: 2px solid grey;
+		}
+	</style>
+</head>
+<body>
+<div>
+	<h1>this is h1</h1>
+	<h2>this is h2</h2>
+	<h3>this is h3</h3>
+	<p class="lala">this is a page</p>
+	<p>this is another page</p>
+	<p  class="lala">this is another page again</p>
+</div>
+<button id="jq_siblings"> h3 siblings</button>
+<button id="jq_siblings_p">h3 sibings p</button>
+<button id="jq_next">h3 next</button>
+<button id="jq_nextAll">h3 nextAll</button>
+<button id="jq_nextUntil">h1 nextUnitl h3</button>
+<button id="jq_first">first p</button>
+<button id="jq_last">last p</button>
+<button id="jq_eq">eq 0</button>
+<button id="jq_filter">filter</button>
+<button id="jq_not">not</button>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+	$("#jq_siblings").click(function(){
+		$("h3").siblings().css({"border":"2px solid red"});
+	});
+	$("#jq_siblings_p").click(function(){
+		$("h3").siblings("p").css({"border":"2px solid red"});
+	});
+	$("#jq_next").click(function(){
+		$("h3").next().css({"border":"2px solid red"});
+	});
+	$("#jq_nextAll").click(function(){
+		$("h3").nextAll().css({"border":"2px solid red"});
+	});
+	$("#jq_nextUntil").click(function(){
+		$("h1").nextUntil("h3").css({"border":"2px solid red"});
+	});
+	$("#jq_first").click(function(){
+		$("div p").first().css({"border":"2px solid red"});
+	});
+	$("#jq_last").click(function(){
+		$("div p").last().css({"border":"2px solid red"});
+	});
+	$("#jq_eq").click(function(){
+		$("div p").eq(0).css({"border":"2px solid red"});
+	});
+	$("#jq_filter").click(function(){
+		$("p").filter(".lala").css({"border":"2px solid red"});
+	});
+	$("#jq_not").click(function(){
+		$("p").not(".lala").css({"border":"2px solid red"});
+	});
+</script>
+</body>
+</html>

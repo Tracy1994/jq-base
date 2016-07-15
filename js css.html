@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>jq css</title>
+	<style type="text/css">
+		.blue{
+			color:blue;
+		}
+		.important{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<p>this is a paragraph</p>
+<p>this is another paragraph</p>
+<button id="js_bule">blue</button>
+<button id="js_important">important</button>
+<button id="js_b_and_i">blue and important</button>
+<button id="js_remove">remove class</button>
+<button id="js_toggle">toggleClass</button>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript">
+	$("#js_bule").click(function(){
+		$("p").addClass("blue");
+	});
+	$("#js_important").click(function(){
+		$("p").addClass("important");
+	});
+	$("#js_b_and_i").click(function(){
+		$("p").addClass("important blue");
+	});
+	$("#js_remove").click(function(){
+		$("p").removeClass("important blue");
+	});
+	$("#js_toggle").click(function(){
+		$("p").toggleClass("important blue");
+	});
+</script>
+</body>
+</html>
